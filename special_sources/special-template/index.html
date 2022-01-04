@@ -1,15 +1,156 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>스와이프 갤러리</title>
-	<link rel="icon" href="img/favicon.ico" type="image/x-icon">	
-	<link rel="stylesheet" href="css/style.css">	
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/c47106c6a7.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 </head>
-<body>	
 
+<body>
+	<div class="wrap">
+		<h1>UI/UX <span>PORTFOLIO</span></h1>
+
+		<ul class="auto">
+			<li class="buttonStart">
+				<i class="fas fa-play"></i>
+			</li>
+			<li class="buttonStop">
+				<i class="fas fa-pause"></i>
+			</li>
+		</ul>
+
+		<!-- <div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner"></div>
+			</div>
+		</div> -->
+
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic1.png" alt="">
+						<h2>Lorem ipsum dolor sit.</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, magnam!</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic2.png" alt="">
+						<h2>Eos optio velit similique!</h2>
+						<p>Magnam animi saepe voluptatibus voluptates non ipsum, ducimus ratione quibusdam!</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic3.png" alt="">
+						<h2>Explicabo eius accusamus quo.</h2>
+						<p>Eveniet quia pariatur porro accusamus modi hic vel mollitia rem!</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic4.png" alt="">
+						<h2>Quidem quis error suscipit!</h2>
+						<p>Sit accusamus eligendi id incidunt veritatis nesciunt rerum est asperiores!</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide">
+				<div class="inner">
+					<div class="con">
+						<img src="img/pic5.png" alt="">
+						<h2>Hic repudiandae deleniti ex.</h2>
+						<p>Deserunt inventore temporibus provident impedit veritatis officiis commodi ratione pariatur.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+
+		<div class="swiper-pagination"></div>
+
+	</div>
+
+	<script>
+		const swiper = new Swiper('.wrap', {
+			spaceBetween: 0,
+
+			// Optional parameters
+			direction: 'horizontal',
+			loop: true,
+
+			// If we need pagination
+			pagination: {
+				el: '.swiper-pagination',
+				type: 'fraction'
+			},
+
+			// Navigation arrows
+			navigation: {
+				nextEl: '.swiper-button-next',
+				prevEl: '.swiper-button-prev',
+			},
+			spaceBetween: 50,
+
+			slidesPerView: 'auto',
+			grabCursor: true,
+			centeredSlides: true,
+			speed: 1000,
+
+			effect: 'coverflow',
+			coverflowEffect: {
+				rotate: 50,
+				stretch: -100,
+				depth: 400,
+				modifier: 1,
+				slideShadows: false
+			},
+
+			autoplay: {
+				delay: 1000,
+				disableOnInteraction: true
+			}
+		});
+
+		const buttonStart = document.querySelector('.buttonStart');
+		const buttonStop = document.querySelector('.buttonStop');
+
+		buttonStart.addEventListener('click', () => {
+			swiper.autoplay.start();
+		});
+
+		buttonStop.addEventListener('click', () => {
+			swiper.autoplay.stop();
+		});
+	</script>
 </body>
+
 </html>
