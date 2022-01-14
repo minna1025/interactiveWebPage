@@ -1,12 +1,81 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
     <title></title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+      body { display: flex; flex-direction: column; width: 100vw; justify-content: center; align-items: center; padding: 100px 0;}
+      h2 { color: #111; font-size: 40px;}
+      p { text-align: center; font-size: 20px;}
+      article { display:flex; flex-wrap:wrap; width: 1500px; justify-content: space-between; gap: 30px;}
+      section { width: 350px; text-align: center;}
+      section img { width: 100%; height: 250px; object-fit: cover; transition: all .5s;}
+      a { color: #969696;  transition: all .5s;}
+      section:hover a { color:#111;}
+      section:hover img { transform: scale(1.1);}
+    </style>
   </head>
   <body>
-    tada!
+    <header>
+      <h2>Hello, stranger!</h2>
+      <p>Do you wanna What I done?</p>
+    </header>
+    <main>
+      <article>
+        <section>
+          <a href="/template/07-template/member1.html">
+            <h3>프로필 만들기</h3>
+            <img src="/assets/images/01.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/template/08-template/index.html">
+            <h3>기업의 기본 웹페이지</h3>
+            <img src="/assets/images/02.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/template/09-template/index.html">
+            <h3>밤 낯이 바뀌는 마을 애니메이션</h3>
+            <img src="/assets/images/03.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/template/10-template/index.html">
+            <h3>360도 회전하는 파노라마 소개 페이지</h3>
+            <img src="/assets/images/04.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/template/11-template/index.html">
+            <h3>flex 레이아웃 기반의 동영상 웹 페이지</h3>
+            <img src="/assets/images/05.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/template/12-template/index.html">
+            <h3>자동으로 음악이 나오는 뮤직 플레이어</h3>
+            <img src="/assets/images/06.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/template/13-template/index.html">
+            <h3>핀터레스트 스타일의 반응형 웹 갤러리</h3>
+            <img src="/assets/images/07.png" />
+          </a>
+        </section>
+        <section>
+          <a href="/special_sources/special-template/index.html">
+            <h3>플러그인을 사용한 스와이프 갤러리</h3>
+            <img src="/assets/images/08.png" />
+          </a>
+        </section>
+      </article>
+    </main>
   </body>
 </html>
